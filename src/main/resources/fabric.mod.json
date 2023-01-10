@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pigsteel",
+  "version": "${version}",
+
+  "name": "Pigsteel",
+  "description": "An abundance of iron in the nether.",
+  "authors": [
+    "DigitalPear"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "CC0-1.0",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+        "digitalpear.pigsteel.Pigsteel"
+    ]
+  },
+  "mixins": [
+      "pigsteel.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.13.3"
+  },
+  "suggests": {
+  }
+}
