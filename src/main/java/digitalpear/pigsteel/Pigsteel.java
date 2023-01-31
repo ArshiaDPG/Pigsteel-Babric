@@ -23,16 +23,6 @@ public class Pigsteel implements ModInitializer {
         return percent > 0 && rand.nextInt(100) <= percent;
     }
 
-
-//
-//    public static final Block pigsteelPlates = BlockHelper.createBlock(
-//            new BlockPigsteelSlag(baseID + 2),
-//            name("plates.pigsteel"),
-//            31, 2,
-//            Block.soundMetalFootstep,
-//            Block.blockIron.getHardness() + 2,
-//            12.0F,
-//            0);
     public static final Block pigsteelSlag = BlockHelper.createBlock(MOD_ID, new BlockPigsteelSlag(baseID + 1), name("slag.pigsteel"),
         "pigsteelSlagEnd.png", "pigsteelSlagSide.png",Block.soundStoneFootstep, 3f, 4f, 0);
 

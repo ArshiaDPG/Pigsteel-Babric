@@ -36,7 +36,7 @@ public class ChunkProviderRetroMixin {
 
         for (int i = 0; i < magicValue; ++i) {
 
-            // 30% chance for the ore to generate
+            // 1% chance for the ore to generate
             if (!Pigsteel.probability(hellRNG, 1)) {
                 continue;
             }
