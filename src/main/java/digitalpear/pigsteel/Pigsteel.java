@@ -49,6 +49,7 @@ public class Pigsteel implements ModInitializer {
 
 
         RecipeHelper.smeltingManager.addSmelting(Pigsteel.pigsteelChunk.itemID, new ItemStack(Item.ingotIron));
+        RecipeHelper.blastingManager.addSmelting(Pigsteel.pigsteelChunk.itemID, new ItemStack(Item.ingotIron));
         RecipeHelper.smeltingManager.addSmelting(pigsteelSlag.blockID, new ItemStack(Item.ingotIron));
         RecipeHelper.blastingManager.addSmelting(pigsteelSlag.blockID, new ItemStack(Block.blockIron));
 
