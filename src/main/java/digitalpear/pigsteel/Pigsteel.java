@@ -12,7 +12,7 @@ import java.util.Random;
 
 
 public class Pigsteel implements ModInitializer {
-    public static final String MOD_ID = "pigsteel";
+    public static final String MOD_ID = "assets/pigsteel";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     static int baseID = 900;
 
@@ -23,19 +23,21 @@ public class Pigsteel implements ModInitializer {
         return percent > 0 && rand.nextInt(100) <= percent;
     }
 
-    public static final Block pigsteelSlag = BlockHelper.createBlock(
-            new BlockPigsteelSlag(baseID + 1),
-            name("slag.pigsteel"),
-            31, 0, 31, 1,
-            Block.soundStoneFootstep,
-            3f,
-            4f,
-            0);
 
-    public static final Block pigsteelPlates = BlockHelper.createBlock(
-            new BlockPigsteelSlag(baseID + 2),
-            name("plates.pigsteel"),
-            31, 2,
+//
+//    public static final Block pigsteelPlates = BlockHelper.createBlock(
+//            new BlockPigsteelSlag(baseID + 2),
+//            name("plates.pigsteel"),
+//            31, 2,
+//            Block.soundMetalFootstep,
+//            Block.blockIron.getHardness() + 2,
+//            12.0F,
+//            0);
+    public static final Block pigsteelSlag = BlockHelper.createBlock(MOD_ID, new BlockPigsteelSlag(baseID + 1), name("slag.pigsteel"),
+        "pigsteelSlagEnd.png", "pigsteelSlagSide.png",Block.soundStoneFootstep, 3f, 4f, 0);
+
+    public static final Block pigsteelPlates = BlockHelper.createBlock(MOD_ID, new Block(baseID + 2, Material.iron), name("plates.pigsteel"),
+            "pigsteelPlates.png",
             Block.soundMetalFootstep,
             Block.blockIron.getHardness() + 2,
             12.0F,
@@ -54,9 +56,6 @@ public class Pigsteel implements ModInitializer {
     @Override
     public void onInitialize() {
         TextureHelper.addTextureToItems(MOD_ID, "pigsteelChunk.png", 0, 14);
-        TextureHelper.addTextureToTerrain(MOD_ID, "pigsteelSlagEnd.png", 31, 0);
-        TextureHelper.addTextureToTerrain(MOD_ID, "pigsteelSlagSide.png", 31, 1);
-        TextureHelper.addTextureToTerrain(MOD_ID, "pigsteelPlates.png", 31, 2);
 
 
         RecipeHelper.smeltingManager.addSmelting(Pigsteel.pigsteelChunk.itemID, new ItemStack(Item.ingotIron));
@@ -65,6 +64,7 @@ public class Pigsteel implements ModInitializer {
 
         RecipeHelper.Crafting.createRecipe(Pigsteel.pigsteelPlates, 1, new Object[]{"AA", "AA", 'A', Pigsteel.pigsteelChunk});
         RecipeHelper.Crafting.createShapelessRecipe(Pigsteel.pigsteelChunk, 4, new Object[]{new ItemStack(Pigsteel.pigsteelPlates, 1)});
+
 
         LOGGER.info(MOD_ID + " initialized.");
     }

@@ -1445,11 +1445,11 @@ item.label.name=Label
 item.label.desc=Allows you to name items and creatures. Can be dyed.
 
 
-tile.pigsteel.slag.pigsteel.name=Pigsteel Slag
-tile.pigsteel.slag.pigsteel.desc=Chunks of metal found deep in the nether.
+tile.assets/pigsteel.assets/pigsteel.slag.pigsteel.name=Pigsteel Slag
+tile.assets/pigsteel.assets/pigsteel.slag.pigsteel.desc=Chunks of metal found deep in the nether.
 
-tile.pigsteel.plates.pigsteel.name=Pigsteel Plates
-tile.pigsteel.plates.pigsteel.desc=Industrial decoration from hell.
+tile.assets/pigsteel.assets/pigsteel.plates.pigsteel.name=Pigsteel Plates
+tile.assets/pigsteel.assets/pigsteel.plates.pigsteel.desc=Industrial decoration from hell.
 
-item.pigsteel.chunk.pigsteel.name=Pigsteel Chunk
-item.pigsteel.chunk.pigsteel.desc=Chunks of pigsteel used to make tools.
+item.assets/pigsteel.chunk.pigsteel.name=Pigsteel Chunk
+item.assets/pigsteel.chunk.pigsteel.desc=Chunks of pigsteel used to make tools.
