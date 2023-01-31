@@ -12,7 +12,7 @@ import java.util.Random;
 
 
 public class Pigsteel implements ModInitializer {
-    public static final String MOD_ID = "assets/pigsteel";
+    public static final String MOD_ID = "pigsteel";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     static int baseID = 900;
 
@@ -23,10 +23,10 @@ public class Pigsteel implements ModInitializer {
         return percent > 0 && rand.nextInt(100) <= percent;
     }
 
-    public static final Block pigsteelSlag = BlockHelper.createBlock(MOD_ID, new BlockPigsteelSlag(baseID + 1), name("slag.pigsteel"),
+    public static final Block pigsteelSlag = BlockHelper.createBlock(MOD_ID, new BlockPigsteelSlag(baseID + 1), "slag.pigsteel",
         "pigsteelSlagEnd.png", "pigsteelSlagSide.png",Block.soundStoneFootstep, 3f, 4f, 0);
 
-    public static final Block pigsteelPlates = BlockHelper.createBlock(MOD_ID, new Block(baseID + 2, Material.iron), name("plates.pigsteel"),
+    public static final Block pigsteelPlates = BlockHelper.createBlock(MOD_ID, new Block(baseID + 2, Material.iron), "plates.pigsteel",
             "pigsteelPlates.png",
             Block.soundMetalFootstep,
             Block.blockIron.getHardness() + 2,
